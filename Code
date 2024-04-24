@@ -1,5 +1,11 @@
 @echo off
-title Windows 11 KMS activator BY Static-Tesseract XYZ&cls&echo ************************************ &echo Static-Tesseract &echo.&echo ************************************ &echo Windows 11 activation...
+title Generating Windows 11 KMS activation protocol - Enhanced by Static-Tesseract XYZ
+cls
+echo ************************************
+echo Static-Tesseract
+echo.
+echo ************************************
+echo Initiate Windows 11 activation procedure...
 cscript //nologo c:\windows\system32\slmgr.vbs /ipk TX9XD-98N7V-6WMQ6-BX7FG-H8Q99 >nul
 cscript //nologo c:\windows\system32\slmgr.vbs /ipk 3KHY7-WNT83-DGQKR-F7HPR-844BM >nul
 cscript //nologo c:\windows\system32\slmgr.vbs /ipk 7HNRX-D7KGG-3K4RQ-4WPJ4-YTDFH >nul
@@ -13,7 +19,10 @@ cscript //nologo c:\windows\system32\slmgr.vbs /ipk NPPR9-FWDCX-D2C8J-H872K-2YT4
 cscript //nologo c:\windows\system32\slmgr.vbs /ipk DPH2V-TTNVB-4X9Q3-TJR4H-KHJW4 >nul
 cscript //nologo c:\windows\system32\slmgr.vbs /ipk WNMTR-4C88C-JK8YV-HQ7T2-76DF9 >nul
 cscript //nologo c:\windows\system32\slmgr.vbs /ipk 2F77B-TNFGY-69QQF-B8YKP-D69TJ >nul
-echo ************************************ &echo.&echo.&set i=1
+echo ************************************
+echo.
+echo.
+set i=1
 :server
 if %i%==1 set KMS_Sev=kms.chinancce.com
 if %i%==2 set KMS_Sev=NextLevel.uk.to
@@ -23,5 +32,18 @@ if %i%==5 set KMS_Sev=kms.chinancce.com
 if %i%==6 set KMS_Sev=kms.shuax.com
 if %i%==7 exit
 cscript //nologo c:\windows\system32\slmgr.vbs /skms %KMS_Sev% >nul
-cscript //nologo c:\windows\system32\slmgr.vbs /ato | find /i "successfully" && (echo.&  ************************************ & echo. & choice /n /c YN /m "Do you want to restart your PC now [Y,N]?" & if errorlevel 2 exit) || (echo The connection to the server failed! Trying to connect to another one... & echo Please wait... & echo. & echo. & set /a i+=1 & goto server)
+cscript //nologo c:\windows\system32\slmgr.vbs /ato | find /i "successfully" && (
+    echo.
+    echo ************************************
+    echo.
+    choice /n /c YN /m "Do you want to restart your PC now [Y,N]?"
+    if errorlevel 2 exit
+) || (
+    echo The connection to the server failed! Attempting to connect to another server...
+    echo Please wait...
+    echo.
+    echo.
+    set /a i+=1
+    goto server
+)
 shutdown.exe /r /t 00
